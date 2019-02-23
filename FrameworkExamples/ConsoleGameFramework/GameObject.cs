@@ -9,51 +9,10 @@ namespace ConsoleGameFramework
 
     public class GameObject
     {
-        private char _sprite;
-        public char Sprite
-        {
-            get
-            {
-                return _sprite;
-            }
-
-            set
-            {
-                _sprite = value;
-            }
-        }
-        private ConsoleColor _color;
-        public ConsoleColor Color
-        {
-            get
-            {
-                return _color;
-            }
-
-            set
-            {
-                _color = value;
-            }
-        }
-        private int _x;
-        private int _y;
-        public int X
-        {
-            get { return _x; }
-            set { _x = value; }
-        }
-        public int Y
-        {
-            get
-            {
-                return _y;
-            }
-
-            set
-            {
-                _y = value;
-            }
-        }
+        public char Sprite { get; private set; }
+        public ConsoleColor Color { get; private set; }
+        public int X { get; private set; }
+        public int Y { get; private set; }
 
         /// <summary>
         /// Game Object
@@ -62,9 +21,9 @@ namespace ConsoleGameFramework
         /// <param name="x">X positon on the console</param>
         /// <param name="y">Y positon on the console</param>
         /// <param name="color">Sprite color</param>
-        public GameObject(char spr, int x, int y, ConsoleColor color = ConsoleColor.Black)
+        public GameObject(char sprite, int x, int y, ConsoleColor color = ConsoleColor.White)
         {
-            Sprite = spr;
+            Sprite = sprite;
             Color = color;
             X = x;
             Y = y;
