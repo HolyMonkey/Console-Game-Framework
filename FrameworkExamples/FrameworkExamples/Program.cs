@@ -10,8 +10,14 @@ namespace FrameworkExamples
     {
         static void Main(string[] args)
         {
-           int health = CGF.ReadInt();
+            Scene scene = new Scene();
+            SceneRenderer renderer = new SceneRenderer();
+            GameObject go = new GameObject('#', 0, 0, ConsoleColor.Red);
+            GameObject go1 = new GameObject('$', 1, 0, ConsoleColor.Green);
+            scene.AddObject(go);
+            scene.AddObject(go1);
+            renderer.DrawScene(scene);
+            Console.ReadKey();
         }
-
     }
 }
