@@ -8,6 +8,9 @@ namespace ConsoleGameFramework
 {
     public class Utility
     {
+        /// <summary>
+        /// this method reading whole number.
+        /// </summary>
         public static int ReadInt()
         {
             int result;

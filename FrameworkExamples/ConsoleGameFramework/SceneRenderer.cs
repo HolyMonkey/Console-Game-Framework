@@ -8,6 +8,11 @@ namespace ConsoleGameFramework
 {
     public class SceneRenderer
     {
+
+        /// <summary>
+        /// Drawing scene
+        /// </summary>
+        /// <param name="scene">Scene for render</param>
         public void DrawScene(Scene scene)
         {
             foreach (var go in scene.GetObjects())

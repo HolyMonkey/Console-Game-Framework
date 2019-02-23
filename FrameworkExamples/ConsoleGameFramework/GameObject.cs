@@ -55,6 +55,13 @@ namespace ConsoleGameFramework
             }
         }
 
+        /// <summary>
+        /// Game Object
+        /// </summary>
+        /// <param name="spr">char symbol for rendering</param>
+        /// <param name="x">X positon on the console</param>
+        /// <param name="y">Y positon on the console</param>
+        /// <param name="color">Sprite color</param>
         public GameObject(char spr, int x, int y, ConsoleColor color = ConsoleColor.Black)
         {
             Sprite = spr;
