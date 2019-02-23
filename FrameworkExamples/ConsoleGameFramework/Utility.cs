@@ -6,16 +6,17 @@ using System.Threading.Tasks;
 
 namespace ConsoleGameFramework
 {
-    public class CGF
+    public class Utility
     {
+        /// <summary>
+        /// this method reading whole number.
+        /// </summary>
         public static int ReadInt()
         {
             int result;
             do
             {
-
                 Console.WriteLine("Введите число");
-
             } while (!int.TryParse(Console.ReadLine(), out result));
             return result;
         }
