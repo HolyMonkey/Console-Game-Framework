@@ -12,8 +12,6 @@ namespace FrameworkExamples
         static void Main(string[] args)
         {
             Console.CursorVisible = false;
-            ConsoleKeyInfo currentKey = new ConsoleKeyInfo();
-
             Scene scene = new Scene();
             SceneRenderer renderer = new SceneRenderer();
             GameObject go = new GameObject('#', 0, 0, ConsoleColor.Red);
@@ -21,13 +19,8 @@ namespace FrameworkExamples
             scene.AddObject(go);
             scene.AddObject(go1);
 
-            Task.Factory.StartNew(() =>
-            {
-                while (true)
-                {
-                    currentKey = Console.ReadKey(false);
-                }
-            });
+            Input input = new Input();
+            input.Check();
 
             while (true)
             {

@@ -6,8 +6,6 @@ using System.Threading.Tasks;
 
 namespace ConsoleGameFramework
 {
-
-
     public class Utility
     {
         /// <summary>

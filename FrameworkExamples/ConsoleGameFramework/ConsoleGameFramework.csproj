@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GameObject.cs" />
+    <Compile Include="Input.cs" />
     <Compile Include="Scene.cs" />
     <Compile Include="SceneRenderer.cs" />
     <Compile Include="Utility.cs" />
