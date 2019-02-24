@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace ConsoleGameFramework
 {
-
     public class GameObject
     {
         public char Sprite { get; private set; }
@@ -27,6 +26,6 @@ namespace ConsoleGameFramework
             Color = color;
             X = x;
             Y = y;
-        }
+        }  
     }
 }
