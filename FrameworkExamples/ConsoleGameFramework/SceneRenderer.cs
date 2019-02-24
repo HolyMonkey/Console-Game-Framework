@@ -8,7 +8,6 @@ namespace ConsoleGameFramework
 {
     public class SceneRenderer
     {
-
         /// <summary>
         /// Drawing scene
         /// </summary>

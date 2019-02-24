@@ -11,7 +11,7 @@ namespace ConsoleGameFramework
     {
         public char Sprite { get; private set; }
         public ConsoleColor Color { get; private set; }
-        public int X { get; private set; }
+        public int X { get;  private set; }
         public int Y { get; private set; }
 
         /// <summary>
@@ -27,6 +27,6 @@ namespace ConsoleGameFramework
             Color = color;
             X = x;
             Y = y;
-        }
+        }  
     }
 }
