@@ -11,7 +11,7 @@ namespace ConsoleGameFramework
     public class Input
     {
         public ConsoleKeyInfo currentKey = new ConsoleKeyInfo();
-        public void Check()
+        public void StartInput()
         {
             Task.Factory.StartNew(() =>
             {

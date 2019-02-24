@@ -20,7 +20,7 @@ namespace FrameworkExamples
             scene.AddObject(go1);
 
             Input input = new Input();
-            input.Check();
+            input.StartInput();
 
             while (true)
             {
@@ -28,8 +28,6 @@ namespace FrameworkExamples
                 Thread.Sleep(100);
                 Console.Clear();
             }
-
-
         }
     }
 }

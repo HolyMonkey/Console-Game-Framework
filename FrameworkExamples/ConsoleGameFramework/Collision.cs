@@ -10,7 +10,7 @@ namespace ConsoleGameFramework
     {
         public static bool Enter(GameObject a, GameObject b)
         {
-            return a.X == b.X;
+            return ((a.X == b.X) && (a.Y == b.Y));
         }
     }
 }
