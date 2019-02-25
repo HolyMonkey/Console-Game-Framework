@@ -42,8 +42,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Collision.cs" />
+    <Compile Include="Component.cs" />
     <Compile Include="GameObject.cs" />
     <Compile Include="Input.cs" />
+    <Compile Include="MovementComponent.cs" />
     <Compile Include="Scene.cs" />
     <Compile Include="SceneRenderer.cs" />
     <Compile Include="Utility.cs" />

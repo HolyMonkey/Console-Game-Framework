@@ -24,6 +24,12 @@ namespace FrameworkExamples
 
             while (true)
             {
+                MovementComponent movement = new MovementComponent(go, input.currentKey);
+                go.AddComponent(movement);
+                foreach (var item in go.GetAllComponents())
+                {
+                    item.Update();
+                }
                 renderer.DrawScene(scene);
                 Thread.Sleep(100);
                 Console.Clear();
