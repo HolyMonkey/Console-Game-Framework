@@ -9,27 +9,26 @@ namespace ConsoleGameFramework
     public class MovementComponent : Component
     {
         private GameObject _gameObject;
-        private ConsoleKeyInfo _key;
-        public MovementComponent(GameObject go, ConsoleKeyInfo key)
+        private Input _input;
+        public MovementComponent(GameObject go, Input input)
         {
             _gameObject = go;
-            _key = key;
+            _input = input;
         }
 
         public override void Start()
         {
-
         }
 
         public override void Update()
         {
-            if (_key.Key == ConsoleKey.A)
+            if (_input.currentKey.Key == ConsoleKey.A)
                 _gameObject.X--;
-            else if (_key.Key == ConsoleKey.D)
+            else if (_input.currentKey.Key == ConsoleKey.D)
                 _gameObject.X++;
-            else if (_key.Key == ConsoleKey.W)
+            else if (_input.currentKey.Key == ConsoleKey.W)
                 _gameObject.Y--;
-            else if (_key.Key == ConsoleKey.S)
+            else if (_input.currentKey.Key == ConsoleKey.S)
                 _gameObject.Y++;
         }
     }
