@@ -8,10 +8,11 @@ namespace ConsoleGameFramework
 {
     public class GameObject
     {
+        private List<Component> _components = new List<Component>();
         public char Sprite { get; private set; }
         public ConsoleColor Color { get; private set; }
-        public int X { get; private set; }
-        public int Y { get; private set; }
+        public int X { get; set; }
+        public int Y { get; set; }
 
         /// <summary>
         /// Game Object
@@ -27,5 +28,15 @@ namespace ConsoleGameFramework
             X = x;
             Y = y;
         }  
+
+        public void AddComponent(Component component)
+        {
+            _components.Add(component);
+        }
+
+        public IEnumerable<Component> GetAllComponents()
+        {
+            return _components;
+        }
     }
 }

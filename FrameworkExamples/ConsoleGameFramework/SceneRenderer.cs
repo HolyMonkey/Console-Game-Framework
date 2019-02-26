@@ -14,7 +14,7 @@ namespace ConsoleGameFramework
         /// <param name="scene">Scene for render</param>
         public void DrawScene(Scene scene)
         {
-            foreach (var go in scene.GetObjects())
+            foreach (var go in scene.GetAllGameObjects())
             {
                 Console.SetCursorPosition(go.X, go.Y);
                 Console.ForegroundColor = go.Color;

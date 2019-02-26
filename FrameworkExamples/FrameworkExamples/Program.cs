@@ -18,12 +18,20 @@ namespace FrameworkExamples
             GameObject go1 = new GameObject('$', 1, 0, ConsoleColor.Green);
             scene.AddObject(go);
             scene.AddObject(go1);
-
             Input input = new Input();
+
             input.StartInput();
+            MovementComponent movement = new MovementComponent(go, input);
+            go.AddComponent(movement);
 
             while (true)
             {
+                foreach (var item in go.GetAllComponents())
+                {
+                    item.Start();   
+                    item.Update();
+                }
+
                 renderer.DrawScene(scene);
                 Thread.Sleep(100);
                 Console.Clear();

@@ -24,7 +24,7 @@ namespace ConsoleGameFramework
         /// Return all objects in the scene
         /// </summary>
         /// <returns>IEnumerable List</returns>
-        public IEnumerable<GameObject> GetObjects()
+        public IEnumerable<GameObject> GetAllGameObjects()
         {
             return _gameObjects;
         }
