@@ -18,6 +18,7 @@ namespace ConsoleGameFramework
             {
                 Console.WriteLine("Введите число");
             } while (!int.TryParse(Console.ReadLine(), out result));
+
             return result;
         }
     }
