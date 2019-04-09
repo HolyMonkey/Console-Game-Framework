@@ -16,9 +16,20 @@ namespace ConsoleGameFramework
         {
             foreach (var go in scene.GetAllGameObjects())
             {
-                Console.SetCursorPosition(go.X, go.Y);
+                ConsoleColor lastColor = Console.ForegroundColor;
                 Console.ForegroundColor = go.Color;
-                Console.Write(go.Sprite);
+
+                char[,] image = Sprites.GetSprite(go.SpriteID).Image;
+                for (int i = 0; i < image.GetLength(0); i++)
+                {
+                    for (int j = 0; j < image.GetLength(1); j++)
+                    {
+                        Console.SetCursorPosition(go.X + j, go.Y + i);
+                        Console.Write(image[i,j]);
+                    }
+                }
+
+                Console.ForegroundColor = lastColor;
             }
         }
     }

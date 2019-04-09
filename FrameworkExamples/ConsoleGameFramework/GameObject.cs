@@ -9,10 +9,10 @@ namespace ConsoleGameFramework
     public class GameObject
     {
         private List<Component> _components = new List<Component>();
-        public char Sprite { get; private set; }
+        public int SpriteID { get; private set; }
         public ConsoleColor Color { get; private set; }
         public int X { get; set; }
-        public int Y { get; set; }
+        public int Y { get; set; }        
 
         /// <summary>
         /// Game Object
@@ -21,13 +21,13 @@ namespace ConsoleGameFramework
         /// <param name="x">X positon on the console</param>
         /// <param name="y">Y positon on the console</param>
         /// <param name="color">Sprite color</param>
-        public GameObject(char sprite, int x, int y, ConsoleColor color = ConsoleColor.White)
+        public GameObject(int spriteID, int x, int y, ConsoleColor color = ConsoleColor.White)
         {
-            Sprite = sprite;
+            SpriteID = spriteID;
             Color = color;
             X = x;
             Y = y;
-        }  
+        }
 
         public void AddComponent(Component component)
         {

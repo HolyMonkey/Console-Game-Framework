@@ -48,6 +48,8 @@
     <Compile Include="MovementComponent.cs" />
     <Compile Include="Scene.cs" />
     <Compile Include="SceneRenderer.cs" />
+    <Compile Include="Sprite.cs" />
+    <Compile Include="Sprites.cs" />
     <Compile Include="Utility.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
