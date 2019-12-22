@@ -1,42 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-using ConsoleGameFramework;
-namespace FrameworkExamples
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.CursorVisible = false;
-            Scene scene = new Scene();
-            SceneRenderer renderer = new SceneRenderer();
-            GameObject go = new GameObject('#', 0, 0, ConsoleColor.Red);
-            GameObject go1 = new GameObject('$', 1, 0, ConsoleColor.Green);
-            scene.AddObject(go);
-            scene.AddObject(go3);
-            scene.AddObject(go1);
-            Input input = new Input();
+#!/usr/bin/env python
 
-            input.StartInput();
-            MovementComponent movement = new MovementComponent(go, input);
-            go.AddComponent(movement);
+#get the username from a prompt
+username = raw_input("Login: >> ")
 
-            while (true)
-            {
-                foreach (var item in go.GetAllComponents())
-                {
-                    item.Start();   
-                    item.Update();
-                }
+#list of allowed users
+user1 = "Jack"
+user2 = "Jill"
 
-                renderer.DrawScene(scene);
-                Thread.Sleep(100);
-                Console.Clear();
-            }
-        }
-    }
-}
+#control that the user belongs to the list of allowed users
+if username == user1:
+    print "Access granted"
+elif username == user2:
+    print "Welcome to the system"
+else:
+    print "Access denied"
