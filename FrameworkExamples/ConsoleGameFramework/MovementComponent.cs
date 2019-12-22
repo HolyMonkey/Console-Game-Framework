@@ -10,15 +10,14 @@ namespace ConsoleGameFramework
     {
         private GameObject _gameObject;
         private Input _input;
+		
         public MovementComponent(GameObject go, Input input)
         {
             _gameObject = go;
             _input = input;
         }
 
-        public override void Start()
-        {
-        }
+        public override void Start() { }
 
         public override void Update()
         {
