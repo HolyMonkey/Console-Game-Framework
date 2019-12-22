@@ -12,10 +12,12 @@ namespace FrameworkExamples
         static void Main(string[] args)
         {
             Console.CursorVisible = false;
+
             Scene scene = new Scene();
             SceneRenderer renderer = new SceneRenderer();
             GameObject go = new GameObject('#', 0, 0, ConsoleColor.Red);
             GameObject go1 = new GameObject('$', 1, 0, ConsoleColor.Green);
+
             scene.AddObject(go);
             scene.AddObject(go1);
             Input input = new Input();
